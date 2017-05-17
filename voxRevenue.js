@@ -22,22 +22,22 @@
         })
     }
 
-    // function submitMetricsTest(){
-    //     metrics.analytics.total_time = new Date().getTime() - startTime
-    //       $.ajax({
-    //         type: "POST",
-    //         url: "https://voxadserver.herokuapp.com/metrics",
-    //         dataType: "json",
-    //         data: JSON.stringify(metrics),
-    //         contentType: "application/json"
-    //         })
-    //         .done(function (response){
-    //           console.log(response)
-    //           })
-    //         .fail(function(response){
-    //         console.log(response)
-    //           })
-    // }
+    function submitMetricsTest(){
+        metrics.analytics.total_time = new Date().getTime() - startTime
+          $.ajax({
+            type: "POST",
+            url: "https://voxadserver.herokuapp.com/metrics",
+            dataType: "json",
+            data: JSON.stringify(metrics),
+            contentType: "application/json"
+            })
+            .done(function (response){
+              console.log(response)
+              })
+            .fail(function(response){
+            console.log(response)
+              })
+    }
 
     function amountScrolled(){
         var winHeight = $(window).height()
